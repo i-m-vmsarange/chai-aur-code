@@ -7,19 +7,18 @@ const App = () => {
   const [counter, setCounter] = useState(15);
 
   function addValue() {
-    if (counter === 20) {
-      setCounter(counter);
-    } else {
-      setCounter(counter + 1);
-    }
+   setCounter(counter + 1);
+   setCounter(counter + 1);
+   setCounter(counter + 1);
+   setCounter(counter + 1);
   }
-  function removeValue() {
-    if (counter === 0) {
-      setCounter(counter);
-    } else {
-      setCounter(counter - 1);
-    }
-  }
+  // function removeValue() {
+  //   if (counter === 0) {
+  //     setCounter(counter);
+  //   } else {
+  //     setCounter(counter - 1);
+  //   }
+  // }
 
   return (
     <>
@@ -28,7 +27,7 @@ const App = () => {
         <br />
         <button onClick={addValue}>Add {counter}</button>
         <br />
-        <button onClick={removeValue}>Remove {counter}</button>
+        <button >Remove {counter}</button>
       </div>
     </>
   );
