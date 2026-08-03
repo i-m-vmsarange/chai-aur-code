@@ -46,7 +46,6 @@ const App = () => {
                 selectCurrency={from}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setFrom(currency)}
-                selectCurrency={from}
                 onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
