@@ -1,9 +1,13 @@
-import React from "react";
-import UserContext from "./context/usercontext";
-import { useContext } from "react";
+import { Profile, Login } from "./components";
 
 const App = () => {
-  return <div className="text-2xl font-bold text-center p-2"></div>;
+  return (
+    <div className="text-center p-8 h-screen w-screen">
+      <h1 className="p-2">React with chai sharing is important</h1>
+      <Login />
+      <Profile />
+    </div>
+  );
 };
 
 export default App;
