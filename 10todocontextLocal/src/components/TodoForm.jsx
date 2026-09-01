@@ -11,6 +11,7 @@ function TodoForm() {
     if (!todoMsg) return;
     addTodo(todoMsg);
     // clear setTodo once the todoMsg is added
+    setTodoMsg("");
   };
 
   return (

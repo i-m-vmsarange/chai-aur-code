@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { TodoProvider } from "./contexts";
 import { TodoForm, TodoItem } from "./components";
+
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    try {
+      const storedTodos = JSON.parse(localStorage.getItem("todos"));
+      return storedTodos ?? [];
+    } catch {
+      return [];
+    }
+  });
 
   // To add new todo item
   const addTodo = (todoMsg) => {
@@ -32,7 +40,6 @@ const App = () => {
   };
 
   // To toggle existing todo item
-
   const toggleComplete = (id) => {
     setTodos((prevTodos) => {
       return prevTodos.map((prevTodo) =>
@@ -42,14 +49,6 @@ const App = () => {
       );
     });
   };
-
-  // If we add dependency here on every change of todo it will fetch the todos array and update the todos, so we will create new useEffect
-  useEffect(() => {
-    const todos = JSON.parse(localStorage.getItem("todos"));
-    if (todos && todos > 0) {
-      setTodos(todos);
-    }
-  }, []);
 
   // Whenever new todo is added or updated we will set them again in localstorage
   useEffect(() => {
@@ -75,8 +74,12 @@ const App = () => {
             <TodoForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
-            {todos.map((item, index) => {
-              return <TodoItem></TodoItem>;
+            {todos.map((todo) => {
+              return (
+                <div key={todo.id}>
+                  <TodoItem todo={todo} />
+                </div>
+              );
             })}
           </div>
         </div>
