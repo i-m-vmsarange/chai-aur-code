@@ -1,7 +1,15 @@
 import React from "react";
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
 
 const App = () => {
-  return <div className="text-center font-bold text-2xl p-4">App</div>;
+  return (
+    <>
+      <h1>Learn about redux toolkit</h1>
+      <AddTodo />
+      <Todos />
+    </>
+  );
 };
 
 export default App;
