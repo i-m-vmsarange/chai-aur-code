@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
 import { login, logout } from "./features/auth/authSlice";
-import { Footer } from "./components";
+import { Footer, Header } from "./components";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const App = () => {
         }
       })
       .catch((error) => {
-        console.log("Error: ", error);
+        console.log("Error fetching current user:", error);
       })
       .finally(() => {
         setLoading(false);
@@ -27,10 +27,10 @@ const App = () => {
   });
 
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap content-between bg-grey-400">
+    <div className="min-h-screen flex justify-center flex-wrap   bg-gray-400">
       <div className="min-w-full block">
         <Header />
-        <main>{/* TODO: <Outlet /> */}</main>
+        <main> ToDo: {/* Outlet /> */}</main>
         <Footer />
       </div>
     </div>

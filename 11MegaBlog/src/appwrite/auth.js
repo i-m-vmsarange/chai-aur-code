@@ -35,6 +35,7 @@ class AuthService {
         password,
       });
       if (doesUserExist) {
+        return this.getCurrentUser();
       } else {
         return "Invalid username or password";
       }
