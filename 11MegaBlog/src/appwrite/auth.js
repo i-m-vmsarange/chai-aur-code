@@ -30,15 +30,7 @@ class AuthService {
   }
   async login({ email, password }) {
     try {
-      const doesUserExist = await this.account.createEmailPasswordSession({
-        email,
-        password,
-      });
-      if (doesUserExist) {
-        return this.getCurrentUser();
-      } else {
-        return "Invalid username or password";
-      }
+      return await this.account.createEmailPasswordSession({ email: email, password: password });
     } catch (error) {
       throw error;
     }

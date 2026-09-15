@@ -8,7 +8,16 @@ function Header() {
     return state.auth.status;
   });
   const navigate = useNavigate();
-  const navItems = [];
+  const navItems = [
+    {
+      name: "Home",
+      slug: "/",
+    },
+    {
+      name: "About",
+      slug: "/about",
+    },
+  ];
   return <div>Header</div>;
 }
 

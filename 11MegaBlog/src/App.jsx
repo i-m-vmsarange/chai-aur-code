@@ -18,9 +18,6 @@ const App = () => {
           dispatch(logout());
         }
       })
-      .catch((error) => {
-        console.log("Error fetching current user:", error);
-      })
       .finally(() => {
         setLoading(false);
       });
