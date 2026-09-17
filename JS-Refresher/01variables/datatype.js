@@ -4,6 +4,7 @@ let name = 'vmsarange';
 let age = 24;
 let isLoggedIn = true;
 
+// Primitive data types
 // number => 2 to power 53
 // bigint
 // string => ""
