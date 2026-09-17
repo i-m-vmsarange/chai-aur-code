@@ -33,3 +33,18 @@ console.log(myObj);
 console.log(typeof heroes);
 console.log(typeof myObj);
 console.log(typeof myFunction);
+
+
+let myYoutubeName = "vmsarange";
+
+let anotherYouTubeName = myYoutubeName;
+anotherYouTubeName = "chai-aur-code";
+
+console.log(myYoutubeName);
+console.log(anotherYouTubeName);
+
+let user = {
+    email: "vmsarange@gmail.com",
+    upiId: "user1@ybl"
+}
+
