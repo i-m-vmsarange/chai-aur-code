@@ -3,6 +3,9 @@
  *  7 types: Number, String, Boolean, Null, Undefined, Symbol, BigInt
  */
 
+
+const abc = "hello"
+console.log(typeof abc, "abc");
 const id = Symbol("123");
 const anotherId = Symbol("123");
 console.log(id === anotherId) //false
@@ -30,7 +33,7 @@ const myFunction = function () {
 }
 console.log(myFunction());
 console.log(myObj);
-console.log(typeof heroes);
+console.log(typeof heroes, "Heroes");
 console.log(typeof myObj);
 console.log(typeof myFunction);
 

@@ -1,5 +1,4 @@
 
-
 let name = 'vmsarange';
 let age = 24;
 let isLoggedIn = true;
