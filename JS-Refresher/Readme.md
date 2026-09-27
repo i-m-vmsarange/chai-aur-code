@@ -1,0 +1,4 @@
+- Difference between Object.freeze and Object.seal is : Object.freeze does not allow you to change values inside the object
+- Object.seal allows you to change values inside the object
+- Anyway both methods are used to prevent add new properties and delete old properties to the existing object
+- Both are shallow: Means both allow manupulating (adding and deleting) properties of their nested objects
